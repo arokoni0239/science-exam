@@ -1,0 +1,10 @@
+# Intermediate PDF extraction (not needed for the live site)
+assets/pdf-pages/
+assets/images/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
