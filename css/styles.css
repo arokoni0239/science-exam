@@ -79,7 +79,7 @@ button, input, textarea, select { font: inherit; }
 .site-header.is-scrolled .nav-toggle span,
 .site-header.theme-light .nav-toggle span {
   color: var(--ink);
-  background-color: var(--ink);
+ /* background-color: var(--ink);*/
 }
 
 .site-header.is-scrolled .nav-links a,
