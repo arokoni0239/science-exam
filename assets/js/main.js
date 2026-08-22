@@ -178,6 +178,25 @@
   window.addEventListener("load", initSwiper);
 
   /**
+   * Hero slideshow: click image to hide/show text overlay
+   */
+  const heroSection = document.getElementById("hero");
+  if (heroSection) {
+    heroSection.addEventListener("click", function(e) {
+      if (
+        e.target.closest(".swiper-button-prev") ||
+        e.target.closest(".swiper-button-next") ||
+        e.target.closest(".swiper-pagination") ||
+        e.target.closest(".hero-cta a") ||
+        e.target.closest("a")
+      ) {
+        return;
+      }
+      heroSection.classList.toggle("text-hidden");
+    });
+  }
+
+  /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
   window.addEventListener('load', function(e) {

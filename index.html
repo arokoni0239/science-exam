@@ -61,9 +61,47 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/docs/hero-broadcast.jpg" alt="Professional broadcast camera and studio" data-aos="fade-in">
+      <div class="hero-slider swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 900,
+            "autoplay": {
+              "delay": 4000,
+              "disableOnInteraction": false
+            },
+            "effect": "fade",
+            "fadeEffect": {
+              "crossFade": true
+            },
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "navigation": {
+              "nextEl": ".swiper-button-next",
+              "prevEl": ".swiper-button-prev"
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-01.jpeg" alt="Broadcast studio production"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-02.jpeg" alt="Studio installation"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-03.jpeg" alt="Broadcast facility"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-04.jpeg" alt="Media studio setup"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-05.jpeg" alt="Production control"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-06.jpeg" alt="TV studio project"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-07.jpeg" alt="Broadcast technology"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-08.jpeg" alt="Studio systems"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-09.jpeg" alt="Live production studio"></div>
+          <div class="swiper-slide"><img src="assets/img/docs/slideshow/slide-10.jpeg" alt="News studio video wall"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-      <div class="container d-flex flex-column align-items-center text-center">
+      <div class="container hero-content d-flex flex-column align-items-center text-center">
         <h2 data-aos="fade-up" data-aos-delay="100">Total Media Solutions</h2>
         <p class="hero-tagline" data-aos="fade-up" data-aos-delay="150">Broadcast Technology. System Integration. Media Solutions.</p>
         <p data-aos="fade-up" data-aos-delay="200">A professional Broadcast Technology and Media System Integration company delivering complete solutions for television, radio, production, newsroom, post-production, transmission, satellite, OTT and digital media environments.</p>
@@ -931,6 +969,7 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-videowall">Video Walls</li>
             <li data-filter=".filter-studio">Studio Setup</li>
+            <li data-filter=".filter-virtual">Virtual / Green Screen</li>
             <li data-filter=".filter-broadcast">Broadcast Systems</li>
             <li data-filter=".filter-live">Live / OB</li>
             <li data-filter=".filter-partners">Partners</li>
@@ -938,38 +977,141 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
+            <!-- Video Walls -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
               <img src="assets/img/docs/ekattor-videowall-1.jpeg" class="img-fluid" alt="Ekattor TV LED Video Wall">
               <div class="portfolio-info">
-                <h4>Ekattor TV (71 Television) Video Wall</h4>
-                <p>LED video wall installation with studio acoustic treatment</p>
+                <h4>Ekattor TV Video Wall</h4>
+                <p>LED video wall with studio acoustic treatment</p>
                 <a href="assets/img/docs/ekattor-videowall-1.jpeg" title="Ekattor TV Video Wall" data-gallery="portfolio-gallery-videowall" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
               <img src="assets/img/docs/ekattor-videowall-2.jpeg" class="img-fluid" alt="Ekattor TV Studio Setup">
               <div class="portfolio-info">
                 <h4>Ekattor TV Studio Setup</h4>
-                <p>Corner LED video wall, lighting grid and reflective studio floor</p>
+                <p>Corner LED wall, lighting grid and studio floor</p>
                 <a href="assets/img/docs/ekattor-videowall-2.jpeg" title="Ekattor TV Studio" data-gallery="portfolio-gallery-videowall" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio filter-broadcast">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
+              <img src="assets/img/docs/slideshow/slide-10.jpeg" class="img-fluid" alt="News studio LED video wall">
+              <div class="portfolio-info">
+                <h4>News Studio LED Wall</h4>
+                <p>Curved LED backdrop with illuminated anchor desk</p>
+                <a href="assets/img/docs/slideshow/slide-10.jpeg" title="News Studio LED Wall" data-gallery="portfolio-gallery-videowall" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
+              <img src="assets/img/docs/slideshow/slide-02.jpeg" class="img-fluid" alt="Curved LED studio installation">
+              <div class="portfolio-info">
+                <h4>Curved LED Studio Install</h4>
+                <p>Panoramic LED wall with circular lighting rig</p>
+                <a href="assets/img/docs/slideshow/slide-02.jpeg" title="Curved LED Studio" data-gallery="portfolio-gallery-videowall" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-videowall filter-studio">
+              <img src="assets/img/docs/slideshow/slide-05.jpeg" class="img-fluid" alt="LED studio project team">
+              <div class="portfolio-info">
+                <h4>LED Studio Project Delivery</h4>
+                <p>Completed LED studio with lighting infrastructure</p>
+                <a href="assets/img/docs/slideshow/slide-05.jpeg" title="LED Studio Project" data-gallery="portfolio-gallery-videowall" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Studio Setup -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
               <img src="assets/img/docs/gp-studio.jpeg" class="img-fluid" alt="Corporate media studio">
               <div class="portfolio-info">
                 <h4>Corporate Media Studio</h4>
-                <p>Multi-monitor media wall with professional camera setup</p>
+                <p>Multi-monitor wall with camera production setup</p>
                 <a href="assets/img/docs/gp-studio.jpeg" title="Corporate Media Studio" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
+              <img src="assets/img/docs/slideshow/slide-07.jpeg" class="img-fluid" alt="News studio with production workstations">
+              <div class="portfolio-info">
+                <h4>News Studio &amp; Workstations</h4>
+                <p>Anchor set with production desks and camera ops</p>
+                <a href="assets/img/docs/slideshow/slide-07.jpeg" title="News Studio Workstations" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
+              <img src="assets/img/docs/slideshow/slide-08.jpeg" class="img-fluid" alt="Broadcast news desk studio">
+              <div class="portfolio-info">
+                <h4>Broadcast News Desk</h4>
+                <p>Curved anchor desk with digital graphics wall</p>
+                <a href="assets/img/docs/slideshow/slide-08.jpeg" title="Broadcast News Desk" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
+              <img src="assets/img/docs/slideshow/slide-09.jpeg" class="img-fluid" alt="TV news presenter studio">
+              <div class="portfolio-info">
+                <h4>TV News Presenter Studio</h4>
+                <p>Presenter set with map graphics LED screen</p>
+                <a href="assets/img/docs/slideshow/slide-09.jpeg" title="TV News Presenter Studio" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
+              <img src="assets/img/docs/radio-studio.jpg" class="img-fluid" alt="Radio and podcast studio">
+              <div class="portfolio-info">
+                <h4>Radio &amp; Podcast Studio</h4>
+                <p>Professional audio recording and radio setup</p>
+                <a href="assets/img/docs/radio-studio.jpg" title="Radio Studio" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Virtual / Green Screen -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-virtual filter-studio">
+              <img src="assets/img/docs/slideshow/slide-01.jpeg" class="img-fluid" alt="Green screen production studio">
+              <div class="portfolio-info">
+                <h4>Green Screen Production</h4>
+                <p>Chroma studio with jib camera and lighting grid</p>
+                <a href="assets/img/docs/slideshow/slide-01.jpeg" title="Green Screen Production" data-gallery="portfolio-gallery-virtual" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-virtual filter-studio">
+              <img src="assets/img/docs/slideshow/slide-03.jpeg" class="img-fluid" alt="Virtual studio green screen">
+              <div class="portfolio-info">
+                <h4>Virtual Studio Facility</h4>
+                <p>Full chroma cyclorama with overhead lighting</p>
+                <a href="assets/img/docs/slideshow/slide-03.jpeg" title="Virtual Studio Facility" data-gallery="portfolio-gallery-virtual" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-virtual filter-studio">
+              <img src="assets/img/docs/slideshow/slide-04.jpeg" class="img-fluid" alt="Virtual set with presenter">
+              <div class="portfolio-info">
+                <h4>Virtual Set Recording</h4>
+                <p>Presenter shoot on green screen virtual set</p>
+                <a href="assets/img/docs/slideshow/slide-04.jpeg" title="Virtual Set Recording" data-gallery="portfolio-gallery-virtual" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-virtual filter-studio">
+              <img src="assets/img/docs/slideshow/slide-06.jpeg" class="img-fluid" alt="Chroma key studio shoot">
+              <div class="portfolio-info">
+                <h4>Chroma Key Studio Shoot</h4>
+                <p>Live virtual production with camera coverage</p>
+                <a href="assets/img/docs/slideshow/slide-06.jpeg" title="Chroma Key Studio" data-gallery="portfolio-gallery-virtual" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Broadcast Systems -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-broadcast">
               <img src="assets/img/docs/mcr-control-room.jpg" class="img-fluid" alt="Master Control Room">
               <div class="portfolio-info">
                 <h4>Master Control / NOC</h4>
-                <p>Multi-viewer wall and operator console for channel monitoring</p>
+                <p>Multi-viewer wall and operator consoles</p>
                 <a href="assets/img/docs/mcr-control-room.jpg" title="Master Control Room" data-gallery="portfolio-gallery-broadcast" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -987,44 +1129,36 @@
               <img src="assets/img/docs/pcr-console.webp" class="img-fluid" alt="Vision mixer console">
               <div class="portfolio-info">
                 <h4>Production Switcher Console</h4>
-                <p>Live production vision mixer and camera monitoring</p>
+                <p>Live production vision mixer and monitoring</p>
                 <a href="assets/img/docs/pcr-console.webp" title="Production Switcher" data-gallery="portfolio-gallery-broadcast" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-live filter-broadcast">
-              <img src="assets/img/docs/live-sports-ob.webp" class="img-fluid" alt="Live sports OB production">
-              <div class="portfolio-info">
-                <h4>Live Sports / OB Production</h4>
-                <p>Multi-camera stadium broadcast and live event coverage</p>
-                <a href="assets/img/docs/live-sports-ob.webp" title="Live Sports OB" data-gallery="portfolio-gallery-live" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-studio">
-              <img src="assets/img/docs/radio-studio.jpg" class="img-fluid" alt="Radio and podcast studio">
-              <div class="portfolio-info">
-                <h4>Radio &amp; Podcast Studio</h4>
-                <p>Professional audio recording and radio broadcast setup</p>
-                <a href="assets/img/docs/radio-studio.jpg" title="Radio Studio" data-gallery="portfolio-gallery-studio" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-broadcast">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-broadcast">
               <img src="assets/img/docs/hero-broadcast.jpg" class="img-fluid" alt="Cinema camera and studio">
               <div class="portfolio-info">
                 <h4>Camera &amp; Production Systems</h4>
-                <p>Professional cinema and broadcast camera infrastructure</p>
+                <p>Professional cinema and broadcast cameras</p>
                 <a href="assets/img/docs/hero-broadcast.jpg" title="Camera Systems" data-gallery="portfolio-gallery-broadcast" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-broadcast">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-broadcast">
               <img src="assets/img/docs/video-switcher.webp" class="img-fluid" alt="Video switcher operation">
               <div class="portfolio-info">
                 <h4>Live Switching &amp; Integration</h4>
-                <p>Hands-on production switching and system operation</p>
+                <p>Hands-on production switching and operation</p>
                 <a href="assets/img/docs/video-switcher.webp" title="Video Switcher" data-gallery="portfolio-gallery-broadcast" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Live / OB -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-live filter-broadcast">
+              <img src="assets/img/docs/live-sports-ob.webp" class="img-fluid" alt="Live sports OB production">
+              <div class="portfolio-info">
+                <h4>Live Sports / OB Production</h4>
+                <p>Multi-camera stadium broadcast coverage</p>
+                <a href="assets/img/docs/live-sports-ob.webp" title="Live Sports OB" data-gallery="portfolio-gallery-live" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 

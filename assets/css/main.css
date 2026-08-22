@@ -841,6 +841,48 @@ section,
   z-index: 1;
 }
 
+.hero .hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .hero-slider .swiper-wrapper,
+.hero .hero-slider .swiper-slide {
+  height: 100%;
+}
+
+.hero .hero-slider .swiper-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .hero-slider .swiper-button-prev,
+.hero .hero-slider .swiper-button-next {
+  color: var(--contrast-color);
+  z-index: 4;
+}
+
+.hero .hero-slider .swiper-pagination {
+  z-index: 4;
+  bottom: 24px;
+}
+
+.hero .hero-slider .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 0.45;
+}
+
+.hero .hero-slider .swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  opacity: 1;
+}
+
 .hero:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 30%);
@@ -852,6 +894,25 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+}
+
+.hero .hero-content {
+  transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
+}
+
+.hero.text-hidden .hero-content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.hero.text-hidden:before {
+  background: transparent;
+}
+
+.hero .hero-slider {
+  cursor: pointer;
 }
 
 .hero h2 {
