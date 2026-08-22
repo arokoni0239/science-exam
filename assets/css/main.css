@@ -1129,6 +1129,7 @@ section,
 .partner-item {
   display: flex;
   align-items: center;
+  gap: 12px;
   padding: 15px;
   background-color: #f8f9fa;
   border-radius: 10px;
@@ -1142,8 +1143,9 @@ section,
 }
 
 .partner-logo {
-  margin-right: 15px;
+  margin-right: 3px;
   min-width: 80px;
+  flex-shrink: 0;
 }
 
 .logo-text {
@@ -1154,19 +1156,29 @@ section,
   display: inline-block;
 }
 
-.partner-item:nth-child(1) .logo-text {
+.logo-text.logo-swit {
   background-color: #dc3545;
   color: white;
 }
 
-.partner-item:nth-child(2) .logo-text {
+.logo-text.logo-prompter {
   background-color: #343a40;
   color: white;
 }
 
-.partner-item:nth-child(3) .logo-text {
+.logo-text.logo-datavideo {
   background-color: #007bff;
   color: white;
+}
+
+.logo-text.logo-tbc {
+  background-color: #111827;
+  color: #fbbf24;
+}
+
+.partner-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .partner-info h5 {
@@ -1181,6 +1193,57 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   font-style: italic;
+}
+
+.partner-cert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.partner-cert img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-cert span {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+.partner-cert:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 575px) {
+  .partner-item {
+    flex-wrap: wrap;
+  }
+
+  .partner-cert {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .partner-cert img {
+    width: 72px;
+    height: 54px;
+  }
 }
 
 @media (min-width: 1365px) {
@@ -1296,8 +1359,7 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients .clients-wrap {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 0;
 }
 
 .clients .client-logo {
@@ -1305,26 +1367,47 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  height: 140px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 12px;
   overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .clients .client-logo img {
-  padding: 50px;
-  max-width: 80%;
-  transition: 0.3s;
+  max-width: 100%;
+  max-height: 88px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+  filter: grayscale(1);
+  opacity: 0.72;
+  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
 }
 
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 30px;
-    max-width: 50%;
-  }
+.clients .client-logo:hover {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--heading-color), transparent 90%);
+  transform: translateY(-2px);
 }
 
 .clients .client-logo:hover img {
-  transform: scale(1.1);
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+@media (max-width: 640px) {
+  .clients .client-logo {
+    height: 112px;
+    padding: 1rem;
+  }
+
+  .clients .client-logo img {
+    max-height: 64px;
+  }
 }
 
 /*--------------------------------------------------------------
